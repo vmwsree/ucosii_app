@@ -1,0 +1,104 @@
+{
+    "configurations": [
+        {
+            "name": "mkkk",
+            "gdb": "C:\\Users\\VIVEK\\.ashling\\tools\\toolchain\\riscv32-unknown-elf\\bin\\riscv32-unknown-elf-gdb.exe",
+            "request": "launch",
+            "type": "gdbtarget",
+            "imageAndSymbols": {
+                "symbolFileName": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf",
+                "imageFileName": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf"
+            },
+            "target": {
+                "host": "localhost",
+                "port": "52199",
+                "server": "C:\\Users\\VIVEK\\.ashling\\tools\\debugger\\gdbserver-riscv\\ash-riscv-gdb-server.exe",
+                "serverStartupDelay": 5000,
+                "serverParameters": [
+                    "--gdb-port",
+                    "52199",
+                    "--transport-type",
+                    "jtag",
+                    "--device",
+                    "sifive-e",
+                    "--jtag-frequency",
+                    "16000KHz",
+                    "--tap-number",
+                    "1",
+                    "--core-number",
+                    "0"
+                ]
+            },
+            "preRunCommands": [
+                "-break-insert -t main",
+                "set $mstatus = 0x1800",
+                "python import gdb.custominsn",
+                "source C:\\Users\\VIVEK\\.ashling\\tools\\toolchain\\riscv32-unknown-elf\\share\\gdb\\python\\gdb\\custominsn.py",
+                "set custom-instruction-display on",
+                "show custom-instruction-display",
+                "set custom-instruction-filename C:\\Users\\VIVEK\\.ashling\\tools\\debugger\\gdbserver-riscv\\niosv_custom_instr.xml "
+            ],
+            "initCommands": [
+                "-gdb-set breakpoint pending on",
+                "-enable-pretty-printing",
+                "-gdb-set python print-stack none",
+                "-gdb-set print object on",
+                "-gdb-set print sevenbit-strings on",
+                "-gdb-set dprintf-style call",
+                "-gdb-set record full stop-at-limit off",
+                "-gdb-set auto-solib-add on"
+            ],
+            "program": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf"
+        },
+        {
+            "name": "assa",
+            "gdb": "${env:ASHLING_BINARY_LOCATION}\\toolchain\\riscv32-unknown-elf\\bin\\riscv32-unknown-elf-gdb.exe",
+            "request": "launch",
+            "type": "gdbtarget",
+            "imageAndSymbols": {
+                "symbolFileName": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf",
+                "imageFileName": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf"
+            },
+            "target": {
+                "host": "localhost",
+                "port": "27947",
+                "server": "${env:ASHLING_BINARY_LOCATION}\\debugger\\gdbserver-riscv\\ash-riscv-gdb-server.exe",
+                "serverStartupDelay": 5000,
+                "serverParameters": [
+                    "--gdb-port",
+                    "27947",
+                    "--transport-type",
+                    "jtag",
+                    "--device",
+                    "sifive-e",
+                    "--jtag-frequency",
+                    "16000KHz",
+                    "--tap-number",
+                    "1",
+                    "--core-number",
+                    "0"
+                ]
+            },
+            "preRunCommands": [
+                "-break-insert -t main",
+                "set $mstatus = 0x1800",
+                "python import gdb.custominsn",
+                "source ${env:ASHLING_BINARY_LOCATION}\\toolchain\\riscv32-unknown-elf\\share\\gdb\\python\\gdb\\custominsn.py",
+                "set custom-instruction-display on",
+                "show custom-instruction-display",
+                "set custom-instruction-filename ${env:ASHLING_BINARY_LOCATION}\\debugger\\gdbserver-riscv\\niosv_custom_instr.xml "
+            ],
+            "initCommands": [
+                "-gdb-set breakpoint pending on",
+                "-enable-pretty-printing",
+                "-gdb-set python print-stack none",
+                "-gdb-set print object on",
+                "-gdb-set print sevenbit-strings on",
+                "-gdb-set dprintf-style call",
+                "-gdb-set record full stop-at-limit off",
+                "-gdb-set auto-solib-add on"
+            ],
+            "program": "c:\\Users\\VIVEK\\Downloads\\ucosii_app_20062022 1\\ucosii_app\\build\\hello.elf"
+        }
+    ]
+}

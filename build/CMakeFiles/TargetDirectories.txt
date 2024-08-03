@@ -1,0 +1,7 @@
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/CMakeFiles/hello.elf.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/CMakeFiles/create-objdump.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/CMakeFiles/edit_cache.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/CMakeFiles/rebuild_cache.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/bsp/CMakeFiles/ucosii_hal2_bsp.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/bsp/CMakeFiles/edit_cache.dir
+C:/Users/VIVEK/Downloads/ucosii_app_20062022 1/ucosii_app/build/bsp/CMakeFiles/rebuild_cache.dir
